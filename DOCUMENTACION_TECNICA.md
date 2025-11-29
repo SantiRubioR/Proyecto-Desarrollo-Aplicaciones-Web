@@ -49,7 +49,7 @@
 
 ### Estructura de Carpetas
 
-\`\`\`
+```
 proyecto-alimentacion-saludable/
 │
 ├── 📂 app/
@@ -88,10 +88,7 @@ proyecto-alimentacion-saludable/
 ├── package.json                   # Dependencias del proyecto
 ├── tsconfig.json                  # Configuración TypeScript
 └── next.config.mjs                # Configuración Next.js
-\`\`\`
-
-<img width="602" height="741" alt="image" src="https://github.com/user-attachments/assets/5d6ff56d-f9cc-4200-9b19-0a5250f96a26" />
-
+```
 
 ### Componentes Principales
 
@@ -113,7 +110,7 @@ proyecto-alimentacion-saludable/
 
 ## 🔄 Flujo de Datos
 
-\`\`\`
+```
 ┌─────────────────────────────────────────────┐
 │  Usuario llena formulario en navegador      │
 └────────────────────┬────────────────────────┘
@@ -154,7 +151,7 @@ proyecto-alimentacion-saludable/
          │ Testimonio aparece    │
          │ en la página Home     │
          └───────────────────────┘
-\`\`\`
+```
 
 ### Detalle del Flujo Paso a Paso
 
@@ -198,14 +195,14 @@ proyecto-alimentacion-saludable/
 
 ### Archivo: `.env.local`
 
-\`\`\`bash
+```bash
 # Supabase - OBLIGATORIAS
 NEXT_PUBLIC_SUPABASE_URL=https://tu-proyecto.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGc...tu-clave-publica
 
 # Supabase - OPCIONAL (solo servidor)
 SUPABASE_SERVICE_ROLE_KEY=eyJhbGc...clave-privada-servidor
-\`\`\`
+```
 
 ### Dónde Obtenerlas - Paso a Paso
 
@@ -228,18 +225,18 @@ SUPABASE_SERVICE_ROLE_KEY=eyJhbGc...clave-privada-servidor
 **Paso 5:** Crea archivo `.env.local`
 
 En la raíz del proyecto:
-\`\`\`
+```
 proyecto-alimentacion-saludable/
 ├── .env.local    ← Crear aquí
 └── package.json
-\`\`\`
+```
 
 **Paso 6:** Pega las variables
 
-\`\`\`bash
+```bash
 NEXT_PUBLIC_SUPABASE_URL=https://xxxx.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGc...
-\`\`\`
+```
 
 ---
 
@@ -247,7 +244,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGc...
 
 ### Tabla: testimonios
 
-\`\`\`sql
+```sql
 CREATE TABLE testimonios (
   id BIGSERIAL PRIMARY KEY,
   nombre_acudiente VARCHAR(255) NOT NULL,
@@ -259,7 +256,7 @@ CREATE TABLE testimonios (
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );
-\`\`\`
+```
 
 ### Descripción de Campos
 
@@ -279,7 +276,7 @@ CREATE TABLE testimonios (
 
 Estas políticas controlan quién puede ver y modificar los testimonios:
 
-\`\`\`sql
+```sql
 -- Política 1: Todos pueden VER testimonios
 CREATE POLICY "read_all_testimonials" 
 ON testimonios FOR SELECT 
@@ -299,7 +296,7 @@ USING (auth.uid() = user_id);
 CREATE POLICY "delete_own_testimonials" 
 ON testimonios FOR DELETE 
 USING (auth.uid() = user_id);
-\`\`\`
+```
 
 ---
 
@@ -316,32 +313,32 @@ USING (auth.uid() = user_id);
 
 ### Paso 1: Clonar el Repositorio
 
-\`\`\`bash
+```bash
 git clone https://github.com/tu-usuario/alimentacion-saludable.git
 cd alimentacion-saludable
-\`\`\`
+```
 
 ### Paso 2: Instalar Dependencias
 
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 Este comando lee `package.json` e instala todas las librerías necesarias.
 
 ### Paso 3: Configurar Variables de Entorno
 
-\`\`\`bash
+```bash
 # En la raíz del proyecto, crea:
 touch .env.local
-\`\`\`
+```
 
 Abre `.env.local` y agrega:
 
-\`\`\`bash
+```bash
 NEXT_PUBLIC_SUPABASE_URL=tu_url_aqui
 NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_clave_aqui
-\`\`\`
+```
 
 ### Paso 4: Crear Tabla en Supabase
 
@@ -354,17 +351,17 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_clave_aqui
 
 ### Paso 5: Ejecutar en Desarrollo
 
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 Verás algo como:
 
-\`\`\`
+```
 ▲ Next.js 16.0.3
 - Ready in 1.2s
 - Local:        http://localhost:3000
-\`\`\`
+```
 
 **¡Accede a http://localhost:3000 en tu navegador!**
 
@@ -374,7 +371,7 @@ Verás algo como:
 
 ### Crear un Componente React
 
-\`\`\`tsx
+```tsx
 'use client'
 
 import { useState } from 'react'
@@ -392,11 +389,11 @@ export function MiComponente() {
     </div>
   )
 }
-\`\`\`
+```
 
 ### Crear una Server Action
 
-\`\`\`typescript
+```typescript
 'use server'
 
 import { createServerClient } from '@supabase/ssr'
@@ -429,11 +426,11 @@ export async function crearTestimonio(datos: DatosForm) {
   if (error) throw new Error(error.message)
   return data
 }
-\`\`\`
+```
 
 ### Estilos con Tailwind CSS
 
-\`\`\`tsx
+```tsx
 <div className="flex items-center justify-between gap-4 p-4 bg-orange-50 rounded-lg border border-orange-200">
   <h2 className="text-lg font-semibold text-orange-900">
     Título Importante
@@ -442,7 +439,7 @@ export async function crearTestimonio(datos: DatosForm) {
     Acción
   </button>
 </div>
-\`\`\`
+```
 
 ### Comandos Útiles
 
