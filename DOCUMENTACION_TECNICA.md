@@ -15,33 +15,33 @@
 ## 🛠️ Stack Tecnológico
 
 ### Frontend
+
 | Tecnología | Versión | Propósito |
-|------------|---------|----------|
+|----------|---------|----------|
 | **Next.js** | 16.0.3 | Framework React con App Router |
 | **React** | 19.2.0 | Librería UI y componentes |
 | **TypeScript** | ^5 | Tipado estático y seguridad |
 | **Tailwind CSS** | ^4.1.9 | Estilos y diseño responsive |
-| **Shadcn/ui** | Latest | Componentes UI accesibles y reutilizables |
-| **Radix UI** | Various | Primitivos accesibles para componentes |
+| **Shadcn/ui** | Latest | Componentes UI accesibles |
 | **React Hook Form** | ^7.60.0 | Gestión de formularios |
 | **Lucide React** | ^0.454.0 | Iconos consistentes |
-| **Next Themes** | ^0.4.6 | Soporte para dark/light mode |
 
 ### Backend
+
 | Tecnología | Versión | Propósito |
-|------------|---------|----------|
+|----------|---------|----------|
 | **Supabase** | Latest | Base de datos PostgreSQL |
 | **PostgreSQL** | 15+ | Base de datos relacional |
-| **Server Actions** | Next.js 16 | Funciones del servidor sin API |
+| **Server Actions** | Next.js 16 | Funciones del servidor |
 | **Node.js** | 18+ | Runtime JavaScript |
 
 ### Herramientas de Desarrollo
+
 | Herramienta | Propósito |
-|-------------|----------|
+|----------|----------|
 | **Vercel** | Hosting y deployment |
 | **Git** | Control de versiones |
 | **ESLint** | Linting de código |
-| **TypeScript** | Type checking |
 
 ---
 
@@ -49,104 +49,87 @@
 
 \`\`\`
 proyecto-alimentacion-saludable/
-├── app/                          # App Router de Next.js
-│   ├── layout.tsx               # Layout global
-│   ├── page.tsx                 # Página raíz
-│   ├── globals.css              # Estilos globales
+├── app/
+│   ├── layout.tsx              # Layout global
+│   ├── page.tsx                # Página raíz
+│   ├── globals.css             # Estilos globales
 │   └── actions/
-│       └── testimonials.ts      # Server Actions para testimonios
+│       └── testimonials.ts     # Server Actions
 │
-├── components/                  # Componentes React reutilizables
+├── components/
 │   ├── header.tsx              # Encabezado
-│   ├── sidebar.tsx             # Menú de navegación
+│   ├── sidebar.tsx             # Menú lateral
 │   ├── footer.tsx              # Pie de página
 │   ├── layout.tsx              # Layout wrapper
-│   ├── theme-provider.tsx      # Proveedor de tema
-│   ├── share-story-modal.tsx   # Modal formulario testimonios
+│   ├── share-story-modal.tsx   # Modal de testimonios
 │   ├── testimonial-card.tsx    # Card de testimonios
-│   └── pages/                  # Páginas de cada módulo
-│       ├── home.tsx            # Página de inicio
-│       ├── recipes.tsx         # Recetas saludables
+│   └── pages/
+│       ├── home.tsx            # Página inicio
+│       ├── recipes.tsx         # Recetas
 │       ├── community.tsx       # Comunidad
 │       ├── education.tsx       # Guías educativas
-│       ├── games.tsx           # Zona de juegos
-│       └── alerts.tsx          # Alertas y artículos
+│       ├── games.tsx           # Juegos
+│       └── alerts.tsx          # Alertas
 │
-├── lib/                        # Utilidades y configuraciones
+├── lib/
 │   ├── supabase/
-│   │   ├── client.ts          # Cliente Supabase (navegador)
-│   │   └── server.ts          # Cliente Supabase (servidor)
-│   ├── utils.ts               # Funciones utilitarias
-│   └── types.ts               # Tipos TypeScript
+│   │   ├── client.ts           # Cliente (navegador)
+│   │   └── server.ts           # Cliente (servidor)
+│   ├── utils.ts                # Funciones utilitarias
+│   └── types.ts                # Tipos TypeScript
 │
 ├── public/                     # Assets estáticos
-│   └── images/                # Imágenes
-│
-├── scripts/                    # Scripts de base de datos
-│   └── 001_create_testimonios_table.sql
-│
-├── package.json               # Dependencias
-├── next.config.mjs            # Configuración Next.js
-├── tailwind.config.js         # Configuración Tailwind
-├── tsconfig.json              # Configuración TypeScript
-└── components.json            # Configuración Shadcn
+├── scripts/                    # Scripts SQL
+└── package.json                # Dependencias
 \`\`\`
 
 ### Flujo de Datos
 
 \`\`\`
-Usuario (Browser)
-    ↓
-React Component (share-story-modal.tsx)
-    ↓
-Server Action (app/actions/testimonials.ts)
-    ↓
-Supabase Client (lib/supabase/server.ts)
-    ↓
-PostgreSQL Database (testimonios table)
-    ↓
-Supabase Real-time (si está habilitado)
-    ↓
-React Component (actualización del estado)
+┌─────────────────────────────────────┐
+│  Usuario en el Navegador            │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  React Component (Modal)            │
+│  share-story-modal.tsx              │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  Server Action                      │
+│  app/actions/testimonials.ts        │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  Supabase Client (Servidor)         │
+│  lib/supabase/server.ts             │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  PostgreSQL Database                │
+│  Tabla: testimonios                 │
+└─────────────────────────────────────┘
 \`\`\`
 
 ---
 
 ## 💾 Por qué Supabase
 
-### Razones Principales
+### ✅ Razones Principales
 
-1. **PostgreSQL Potente**
-   - Base de datos relacional confiable
-   - Soporte para JSON, arrays y tipos complejos
-   - Excelente rendimiento en consultas
-
-2. **Authentication Built-in**
-   - Autenticación integrada (actualmente sin requerimiento)
-   - Fácil agregar OAuth, emails, etc.
-   - Row Level Security (RLS) para privacidad
-
-3. **Real-time Capabilities**
-   - Actualizaciones en tiempo real (opcional)
-   - Perfecto para aplicaciones colaborativas
-
-4. **API REST y GraphQL**
-   - Auto-generado desde la base de datos
-   - Documentación automática
-   - Excelente para consultas rápidas
-
-5. **Almacenamiento de Archivos**
-   - Integración nativa para imágenes y documentos
-   - Perfecto para fotos de recetas
-
-6. **Panel de Admin**
-   - Verifica datos sin dejar tu aplicación
-   - Gestión fácil de base de datos
-
-7. **Precio Justo**
-   - Tier gratuito generoso
-   - Escalable conforme crece tu aplicación
-   - Pagos por uso
+| Razón | Beneficio |
+|-------|----------|
+| **PostgreSQL Potente** | Base de datos relacional confiable y rápida |
+| **Auth Integrada** | Autenticación sin código adicional |
+| **Row Level Security** | Privacidad y control de acceso automático |
+| **Real-time API** | Actualizaciones en vivo (opcional) |
+| **REST + GraphQL** | APIs automáticas desde la BD |
+| **Panel Admin** | Gestiona datos visualmente |
+| **Precio Justo** | Tier gratuito generoso |
 
 ---
 
@@ -159,16 +142,16 @@ React Component (actualización del estado)
 NEXT_PUBLIC_SUPABASE_URL=https://tu-proyecto.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGc...tu-clave-aqui
 
-# Supabase - Opcional (para operaciones servidor)
+# Supabase - Opcional (servidor)
 SUPABASE_SERVICE_ROLE_KEY=eyJhbGc...clave-servicio-aqui
 \`\`\`
 
-### Dónde obtenerlas
+### Dónde Obtenerlas
 
 1. Ve a https://supabase.com/dashboard
 2. Selecciona tu proyecto
-3. Ve a **Settings → API**
-4. Copia los valores:
+3. Haz clic en **Settings → API**
+4. Copia:
    - **Project URL** → `NEXT_PUBLIC_SUPABASE_URL`
    - **anon public** → `NEXT_PUBLIC_SUPABASE_ANON_KEY`
    - **service_role secret** → `SUPABASE_SERVICE_ROLE_KEY`
@@ -182,16 +165,30 @@ SUPABASE_SERVICE_ROLE_KEY=eyJhbGc...clave-servicio-aqui
 \`\`\`sql
 CREATE TABLE testimonios (
   id BIGSERIAL PRIMARY KEY,
-  nombre_acudiente VARCHAR(255) NOT NULL,      -- Nombre del padre/madre
-  relacion VARCHAR(50) NOT NULL,               -- "Madre", "Padre", "Abuelo", etc
-  nombre_nino VARCHAR(255) NOT NULL,           -- Nombre del niño
-  comentario TEXT NOT NULL,                    -- Historia/experiencia
+  nombre_acudiente VARCHAR(255) NOT NULL,
+  relacion VARCHAR(50) NOT NULL,
+  nombre_nino VARCHAR(255) NOT NULL,
+  comentario TEXT NOT NULL,
   estrellas INTEGER CHECK (estrellas >= 1 AND estrellas <= 5),
-  logro VARCHAR(255),                          -- Logro alcanzado
+  logro VARCHAR(255),
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );
 \`\`\`
+
+### Campos
+
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| `id` | BIGSERIAL | ID único (Primary Key) |
+| `nombre_acudiente` | VARCHAR | Nombre del padre/madre |
+| `relacion` | VARCHAR | "Madre", "Padre", "Abuelo", etc |
+| `nombre_nino` | VARCHAR | Nombre del niño |
+| `comentario` | TEXT | Historia/experiencia |
+| `estrellas` | INTEGER | Calificación 1-5 |
+| `logro` | VARCHAR | Logro alcanzado |
+| `created_at` | TIMESTAMP | Fecha de creación |
+| `updated_at` | TIMESTAMP | Última actualización |
 
 ### Policies (Row Level Security)
 
@@ -199,14 +196,16 @@ CREATE TABLE testimonios (
 -- Todos pueden ver testimonios
 SELECT: Enable for all users
 
--- Solo el creador puede actualizar su testimonio
-UPDATE: Enable for authenticated users (user_id = auth.uid())
-
--- Solo el creador puede eliminar su testimonio
-DELETE: Enable for authenticated users (user_id = auth.uid())
-
--- Todos pueden crear testimonios (sin autenticación requerida)
+-- Todos pueden crear testimonios
 INSERT: Enable for all users
+
+-- Solo creador puede actualizar
+UPDATE: Enable for authenticated users 
+WHERE user_id = auth.uid()
+
+-- Solo creador puede eliminar
+DELETE: Enable for authenticated users 
+WHERE user_id = auth.uid()
 \`\`\`
 
 ---
@@ -217,58 +216,58 @@ INSERT: Enable for all users
 
 - Node.js 18+
 - Git
-- Cuenta de Supabase (gratis en supabase.com)
+- Cuenta de Supabase (gratis)
 
-### Pasos
-
-#### 1. Clonar el repositorio
+### Paso 1: Clonar
 
 \`\`\`bash
-git clone https://github.com/tu-usuario/alimentacion-saludable-infantil.git
-cd alimentacion-saludable-infantil
+git clone https://github.com/tu-usuario/alimentacion-saludable.git
+cd alimentacion-saludable
 \`\`\`
 
-#### 2. Instalar dependencias
+### Paso 2: Instalar Dependencias
 
 \`\`\`bash
 npm install
 \`\`\`
 
-#### 3. Configurar variables de entorno
+### Paso 3: Variables de Entorno
 
 \`\`\`bash
-# Crea archivo .env.local
+# Crear .env.local
 touch .env.local
+\`\`\`
 
-# Agrega tus variables de Supabase
+Agregar en `.env.local`:
+
+\`\`\`
 NEXT_PUBLIC_SUPABASE_URL=tu_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_key
 \`\`\`
 
-#### 4. Crear tabla en Supabase
+### Paso 4: Crear Tabla en Supabase
 
-1. Ve a Supabase Dashboard
+1. Abre Supabase Dashboard
 2. Ve a **SQL Editor**
-3. Copia y ejecuta el contenido de `scripts/001_create_testimonios_table.sql`
+3. Copia el contenido de `scripts/001_create_testimonios_table.sql`
+4. Ejecuta el script
 
-#### 5. Ejecutar localmente
+### Paso 5: Ejecutar
 
 \`\`\`bash
 npm run dev
 \`\`\`
 
-La aplicación estará disponible en `http://localhost:3000`
+Accede a http://localhost:3000
 
 ---
 
 ## 💻 Guía de Desarrollo
 
-### Estructura de Componentes
-
-**Componente típico:**
+### Estructura de un Componente
 
 \`\`\`tsx
-'use client' // Si usa interactividad del cliente
+'use client'
 
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -279,7 +278,6 @@ export function MiComponente() {
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold">Título</h1>
-      <p className="text-gray-600">Descripción</p>
       <Button onClick={() => setEstado(!estado)}>
         Cambiar estado
       </Button>
@@ -288,9 +286,7 @@ export function MiComponente() {
 }
 \`\`\`
 
-### Server Actions
-
-**Patrón para operaciones de base de datos:**
+### Server Action Pattern
 
 \`\`\`typescript
 'use server'
@@ -298,7 +294,7 @@ export function MiComponente() {
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 
-export async function miAccion(datos: DatosForm) {
+export async function crearTestimonio(datos: DatosForm) {
   const supabase = createServerClient(...)
   
   const { data, error } = await supabase
@@ -310,9 +306,7 @@ export async function miAccion(datos: DatosForm) {
 }
 \`\`\`
 
-### Estilización
-
-Usamos **Tailwind CSS v4** con clases de utilidad:
+### Estilización con Tailwind
 
 \`\`\`tsx
 <div className="flex items-center justify-between gap-4 p-4 bg-orange-50 rounded-lg">
@@ -321,16 +315,16 @@ Usamos **Tailwind CSS v4** con clases de utilidad:
 </div>
 \`\`\`
 
-### Testing
+### Comandos Útiles
 
 \`\`\`bash
-# Ejecutar linter
+# Linting
 npm run lint
 
-# Build para producción
+# Build
 npm run build
 
-# Iniciar producción local
+# Producción
 npm start
 \`\`\`
 
@@ -338,9 +332,8 @@ npm start
 
 ## 📞 Soporte
 
-Si tienes dudas técnicas:
-- Consulta la [documentación de Next.js](https://nextjs.org/docs)
-- Lee la [documentación de Supabase](https://supabase.com/docs)
+- [Documentación Next.js](https://nextjs.org/docs)
+- [Documentación Supabase](https://supabase.com/docs)
 - Abre un issue en el repositorio
 
 ---

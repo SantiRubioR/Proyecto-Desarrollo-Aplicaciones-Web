@@ -1,14 +1,14 @@
 # 👤 Manual de Usuario - Cómo Crear Tu Testimonio
 
-¡Bienvenido! En esta guía te explicaremos paso a paso cómo compartir tu historia de cambio hacia hábitos alimenticios saludables.
+¡Bienvenido! Aquí aprenderás a compartir tu historia de cambio hacia hábitos saludables.
 
 ## 📖 Índice
 
 1. [¿Qué es un Testimonio?](#qué-es-un-testimonio)
 2. [Cómo Acceder](#cómo-acceder)
-3. [Paso a Paso con Imágenes](#paso-a-paso-con-imágenes)
+3. [Paso a Paso](#paso-a-paso)
 4. [Explicación de Campos](#explicación-de-campos)
-5. [Tips para Escribir un Buen Testimonio](#tips-para-escribir-un-buen-testimonio)
+5. [Tips para Escribir](#tips-para-escribir-un-buen-testimonio)
 6. [Preguntas Frecuentes](#preguntas-frecuentes)
 7. [Solución de Problemas](#solución-de-problemas)
 
@@ -16,344 +16,322 @@
 
 ## 🎯 ¿Qué es un Testimonio?
 
-Un **testimonio** es tu historia personal sobre cómo tu familia ha mejorado sus hábitos alimenticios y la salud de tus hijos. Es una forma de:
+Un **testimonio** es tu historia personal sobre cómo tu familia mejoró sus hábitos alimenticios.
 
-✅ Inspirar a otros padres y madres  
-✅ Compartir tu experiencia  
-✅ Celebrar los logros de tu familia  
-✅ Conectar con una comunidad  
-✅ Ayudar a otros a dar el primer paso  
+### Por qué compartir:
+- ✅ Inspiras a otros padres
+- ✅ Celebras tus logros
+- ✅ Conectas con una comunidad
+- ✅ Ayudas a otros a dar el primer paso
 
-**Ejemplo:** "Cuando María empezó a comer frutas en lugar de dulces, su concentración en la escuela mejoró notablemente. Hoy come saludable con entusiasmo."
+**Ejemplo:**
+> Cuando María pasó de rechazar frutas a comerlas con entusiasmo, su concentración en clase mejoró notablemente.
 
 ---
 
 ## 🏠 Cómo Acceder
 
-### Desde la Página de Inicio
-
-1. **Abre la aplicación** en tu navegador
-2. **Desplázate hacia abajo** hasta la sección **"Historias de Cambio y Éxito"**
-3. Verás testimonios de otros padres
-4. **Busca el botón naranja** que dice **"Comparte tu Historia"**
-5. **¡Haz clic!** Se abrirá un modal con el formulario
+1. Abre la aplicación
+2. Desplázate hacia abajo
+3. Busca la sección **"Historias de Cambio y Éxito"**
+4. Haz clic en el botón naranja **"Comparte tu Historia"**
+5. ¡Se abrirá el formulario!
 
 ---
 
-## 📝 Paso a Paso con Imágenes
+## 📝 Paso a Paso
 
-### Paso 1: Abre el Formulario
+### Paso 1️⃣ Abre el Formulario
 
-**Botón "Comparte tu Historia"**
-
-\`\`\`
-┌─────────────────────────────────┐
-│    Historias de Cambio y Éxito  │
-│                                 │
-│ [Testimonio 1]  [Testimonio 2]  │
-│                                 │
-│  ┌─────────────────────────────┐│
-│  │ Comparte tu Historia  →      ││
-│  └─────────────────────────────┘│
-└─────────────────────────────────┘
-\`\`\`
-
-### Paso 2: Completa Nombre del Acudiente
+Busca el botón naranja **"Comparte tu Historia"** y haz clic.
 
 \`\`\`
-┌──────────────────────────────────┐
-│ 📝 Formulario - Comparte tu       │
-│ Experiencia                      │
-├──────────────────────────────────┤
-│                                  │
-│ Nombre del Acudiente *           │
-│ ┌──────────────────────────────┐ │
-│ │ Ej: María García             │ │
-│ └──────────────────────────────┘ │
-│                                  │
-└──────────────────────────────────┘
+┌────────────────────────────────┐
+│  Historias de Cambio y Éxito   │
+│                                │
+│  [Testimonio 1] [Testimonio 2] │
+│                                │
+│  📌 Comparte tu Historia  →    │
+└────────────────────────────────┘
 \`\`\`
 
-**¿Qué escribir aquí?**
+### Paso 2️⃣ Nombre del Acudiente
+
+\`\`\`
+┌────────────────────────────────┐
+│ Nombre del Acudiente *         │
+├────────────────────────────────┤
+│ Escribe tu nombre completo     │
+│                                │
+│ Ejemplo: María García López    │
+└────────────────────────────────┘
+\`\`\`
+
+**Qué escribir:**
 - Tu nombre completo
-- Ejemplo: "Carlos López", "Ana Martínez"
+- Puedes usar letras, números y acentos
 
-### Paso 3: Selecciona Tu Relación
+### Paso 3️⃣ Relación con el Niño
 
 \`\`\`
-┌──────────────────────────────────┐
-│                                  │
-│ Relación con el Niño *           │
-│ ┌──────────────────────────────┐ │
-│ │ Selecciona:                  │ │
-│ │ ☐ Madre                      │ │
-│ │ ☑ Padre                      │ │
-│ │ ☐ Abuelo/a                  │ │
-│ │ ☐ Acudiente                 │ │
-│ └──────────────────────────────┘ │
-│                                  │
-└──────────────────────────────────┘
+┌────────────────────────────────┐
+│ Relación con el Niño *         │
+├────────────────────────────────┤
+│ ◯ Madre                        │
+│ ◉ Padre                        │
+│ ◯ Abuelo/a                    │
+│ ◯ Acudiente                   │
+└────────────────────────────────┘
 \`\`\`
 
-**Opciones disponibles:**
+**Opciones:**
 - **Madre** - Si eres la madre
 - **Padre** - Si eres el padre
 - **Abuelo/a** - Si eres abuelo o abuela
 - **Acudiente** - Si eres otro responsable
 
-### Paso 4: Escribe el Nombre del Niño
+### Paso 4️⃣ Nombre del Niño
 
 \`\`\`
-┌──────────────────────────────────┐
-│                                  │
-│ Nombre del Niño *                │
-│ ┌──────────────────────────────┐ │
-│ │ Ej: Juan, Sofía              │ │
-│ └──────────────────────────────┘ │
-│                                  │
-└──────────────────────────────────┘
+┌────────────────────────────────┐
+│ Nombre del Niño *              │
+├────────────────────────────────┤
+│ Ejemplo: Juan, Sofía           │
+└────────────────────────────────┘
 \`\`\`
 
-**¿Qué escribir aquí?**
-- El nombre del niño o la niña
-- Ejemplo: "Jorge", "Valentina"
+**Qué escribir:**
+- El nombre del niño o niña
+- Solo el nombre (ej: "Jorge" no "Jorge García")
 
-### Paso 5: Califica con Estrellas
+### Paso 5️⃣ Calificación en Estrellas
 
 \`\`\`
-┌──────────────────────────────────┐
-│                                  │
-│ Calificación *                   │
-│                                  │
-│ ☆ ☆ ☆ ☆ ☆  (Haz clic)           │
-│                                  │
-│ ← Selecciona tu calificación →   │
-│                                  │
-└──────────────────────────────────┘
+┌────────────────────────────────┐
+│ Calificación *                 │
+├────────────────────────────────┤
+│ ☆ ☆ ☆ ☆ ☆                    │
+│ ← Haz clic para calificar →   │
+└────────────────────────────────┘
 \`\`\`
 
 **Cómo funciona:**
 1. Pasa el mouse sobre las estrellas
-2. Haz clic donde desees calificar
-3. **5 ⭐** = Excelente cambio
-4. **4 ⭐** = Muy bueno
-5. **3 ⭐** = Bueno
-6. **2 ⭐** = Aceptable
-7. **1 ⭐** = Regular
+2. Haz clic en la que desees
+3. **5⭐** = Cambio excelente
+4. **4⭐** = Muy bueno
+5. **3⭐** = Bueno
+6. **2⭐** = Aceptable
+7. **1⭐** = Regular
 
-### Paso 6: Escribe Tu Historia
+### Paso 6️⃣ Tu Historia
 
 \`\`\`
-┌──────────────────────────────────┐
-│                                  │
-│ Tu Historia / Comentario *       │
-│ ┌──────────────────────────────┐ │
-│ │ Cuenta tu experiencia aquí.. │ │
-│ │                              │ │
-│ │ Hace un año, mi hijo no      │ │
-│ │ comía verduras...            │ │
-│ │                              │ │
-│ │ (Mínimo 20 caracteres)       │ │
-│ └──────────────────────────────┘ │
-│                                  │
-└──────────────────────────────────┘
+┌────────────────────────────────┐
+│ Tu Historia / Comentario *     │
+├────────────────────────────────┤
+│ Cuenta tu experiencia aquí...  │
+│                                │
+│ Mínimo 20 caracteres           │
+└────────────────────────────────┘
 \`\`\`
 
 **Qué escribir:**
 - Tu experiencia personal
-- Cómo ha cambiado la alimentación
+- Cómo cambió la alimentación
 - Antes vs. Después
-- Resulta
-
-dos visibles
+- Resultados visibles
 - Emociones y aprendizajes
 
-### Paso 7: Describe el Logro
+### Paso 7️⃣ Logro Alcanzado (Opcional)
 
 \`\`\`
-┌──────────────────────────────────┐
-│                                  │
-│ Logro Alcanzado (Opcional) *     │
-│ ┌──────────────────────────────┐ │
-│ │ Ej: Mejor concentración      │ │
-│ │ en la escuela                │ │
-│ └──────────────────────────────┘ │
-│                                  │
-└──────────────────────────────────┘
+┌────────────────────────────────┐
+│ Logro Alcanzado *              │
+├────────────────────────────────┤
+│ Ej: Mejor concentración        │
+│ en la escuela                  │
+└────────────────────────────────┘
 \`\`\`
 
-**Ejemplos de logros:**
-- "Mejor desempeño escolar"
-- "Más energía para jugar"
-- "Aumento de peso saludable"
-- "Piel más sana"
-- "Mejor digestión"
+**Ejemplos:**
+- Mejor desempeño escolar
+- Más energía para jugar
+- Aumento de peso saludable
+- Piel más sana
+- Mejor digestión
 
-### Paso 8: Envía Tu Testimonio
+### Paso 8️⃣ Envía Tu Testimonio
 
 \`\`\`
-┌──────────────────────────────────┐
-│                                  │
-│         Completa los campos      │
-│                                  │
-│    ┌────────────┐  ┌──────────┐  │
-│    │ ✓ Enviar   │  │ Cancelar │  │
-│    └────────────┘  └──────────┘  │
-│                                  │
-└──────────────────────────────────┘
+┌────────────────────────────────┐
+│   ¿Todo está completado?       │
+│                                │
+│  ✓ Enviar    ✕ Cancelar       │
+└────────────────────────────────┘
 \`\`\`
 
 **Haz clic en "Enviar":**
-1. Tu testimonio se guardará
+1. Tu testimonio se guardará ✓
 2. Recibirás un mensaje de éxito
 3. Tu historia aparecerá en la sección
-4. ¡Otros padres verán tu inspiradora historia!
+4. ¡Otros padres verán tu historia!
 
 ---
 
 ## 📋 Explicación de Campos
 
-| Campo | Obligatorio | Qué Escribir | Ejemplo |
-|-------|-----------|-------------|---------|
-| **Nombre Acudiente** | Sí | Tu nombre completo | Carlos Gómez |
-| **Relación** | Sí | Tu rol | Padre |
-| **Nombre Niño** | Sí | Nombre del hijo/a | Santiago |
-| **Calificación** | Sí | 1-5 estrellas | ⭐⭐⭐⭐⭐ |
-| **Historia** | Sí | Tu experiencia (mín. 20 caracteres) | Mi hijo comía solo papas fritas... |
-| **Logro** | No | Resultado/cambio visible | Más energía en la escuela |
+| Campo | Obligatorio | Ejemplo |
+|-------|-----------|---------|
+| **Nombre Acudiente** | Sí | Carlos Gómez López |
+| **Relación** | Sí | Padre |
+| **Nombre Niño** | Sí | Santiago |
+| **Calificación** | Sí | ⭐⭐⭐⭐⭐ |
+| **Historia** | Sí | Mi hijo pasó de rechazar verduras a comerlas todos los días... |
+| **Logro** | No | Mejor concentración en clase |
 
 ---
 
 ## ✨ Tips para Escribir un Buen Testimonio
 
-### 1. **Sé Específico**
-❌ Malo: "Mi hijo come mejor"  
-✅ Bueno: "Mi hijo pasó de rechazar las verduras a comer ensalada todos los días"
+### 1️⃣ Sé Específico
 
-### 2. **Incluye Antes y Después**
-❌ Malo: "Todo cambió"  
-✅ Bueno: "Antes comía muchos refrescos y dulces. Ahora elige agua y frutas naturalmente"
+\`\`\`
+❌ Malo: "Mi hijo come mejor"
+✅ Bueno: "Mi hijo pasó de rechazar verduras a comer 
+          ensalada todos los días"
+\`\`\`
 
-### 3. **Destaca los Cambios Reales**
-❌ Malo: "Es mejor"  
-✅ Bueno: "Su peso bajó 5 kg, duerme mejor y tiene más concentración en clase"
+### 2️⃣ Incluye Antes y Después
 
-### 4. **Sé Honesto**
+\`\`\`
+❌ Malo: "Todo cambió"
+✅ Bueno: "Antes comía muchos refrescos y dulces. 
+          Ahora elige agua y frutas naturalmente"
+\`\`\`
+
+### 3️⃣ Destaca los Cambios Reales
+
+\`\`\`
+❌ Malo: "Es mejor"
+✅ Bueno: "Su peso bajó 5 kg, duerme mejor y tiene 
+          más concentración en clase"
+\`\`\`
+
+### 4️⃣ Sé Honesto
 - Comparte lo que realmente pasó
-- Los cambios reales inspiran más que historias perfectas
+- Los cambios reales inspiran más
 - Incluye desafíos que superaste
 
-### 5. **Sé Conciso pero Completo**
-- No es necesario escribir un libro
+### 5️⃣ Sé Conciso
 - 3-5 párrafos son suficientes
 - Usa puntos y aparte para claridad
+- Evita repetir información
 
-### 6. **Agrega Emociones**
+### 6️⃣ Agrega Emociones
 - Cómo te sientes ahora
 - Cómo cambió tu familia
 - Lecciones aprendidas
 
-### Ejemplo de Testimonio Excelente
+### 📌 Ejemplo de Testimonio Excelente
 
-> "Yo soy María, madre de Lucas de 7 años. Hace un año, Lucas solo comía papas fritas, pollo frito y refrescos. Estaba decaído, con baja concentración en la escuela y sobrepeso.
+> **Testimonio de María López**
 >
-> Decidimos hacer un cambio en familia. Empezamos lentamente con recetas del sitio, convirtiendo las comidas en un juego. Hoy, Lucas come frutas, verduras y su bebida favorita es agua natural con limón.
+> Soy María, madre de Lucas de 7 años. Hace un año, Lucas solo comía papas fritas, pollo frito y refrescos. Estaba decaído, sin energía y con bajo desempeño en la escuela.
+>
+> Decidimos hacer un cambio en familia. Empezamos lentamente usando recetas del sitio, convirtiendo las comidas en un juego. Hoy, Lucas come frutas, verduras y su bebida favorita es agua con limón.
 >
 > El cambio más notable: en el último reporte escolar, sus calificaciones subieron y su maestra notó que participa más en clase. Además, juega más activamente con sus amigos.
 >
-> Este viaje nos enseñó que es posible cambiar hábitos con paciencia y amor. ¡Gracias por esta plataforma!"
+> Este viaje nos enseñó que es posible cambiar hábitos con paciencia y amor. ¡Gracias por esta plataforma!
 
 ---
 
 ## ❓ Preguntas Frecuentes
 
 ### P: ¿Debo tener una cuenta para enviar un testimonio?
-**R:** No, no es necesario. Cualquier persona puede compartir un testimonio directamente.
+**R:** No es necesario. Cualquier persona puede compartir directamente.
 
 ### P: ¿Mi testimonio es privado?
-**R:** Tu testimonio será visible para todos en la sección "Historias de Cambio y Éxito". Solo se mostrará tu nombre, relación y historia.
+**R:** Tu testimonio será visible para todos. Solo mostramos tu nombre, relación e historia.
 
-### P: ¿Puedo editar mi testimonio después de enviarlo?
-**R:** Por ahora no hay función de edición, pero puedes contactar al equipo para modificaciones.
+### P: ¿Puedo editar mi testimonio después?
+**R:** Por ahora no, pero puedes contactar al equipo para modificaciones.
 
-### P: ¿Cuánto tiempo tarda en aparecer mi testimonio?
-**R:** Aparece instantáneamente después de enviar. ¡Verás tu historia en la página de inmediato!
+### P: ¿Cuánto tarda en aparecer?
+**R:** Aparece instantáneamente. ¡Verás tu historia de inmediato!
 
-### P: ¿Puedo compartir el testimonio de otras personas?
-**R:** Puedes compartir el enlace del sitio, pero cada persona debe crear su propio testimonio.
-
-### P: ¿Hay límite de testimonios por persona?
-**R:** No, puedes compartir todos los testimonios que desees. Un testimonio por cada logro o cambio importante.
+### P: ¿Puedo compartir varios testimonios?
+**R:** Sí, puedes compartir todos los que desees. Uno por cada logro importante.
 
 ### P: ¿Es seguro compartir información personal?
-**R:** Compartimos solo el nombre, relación y experiencia. No solicitamos datos sensibles (teléfono, dirección, email).
+**R:** Solo pedimos nombre y experiencia. No solicitamos datos sensibles.
 
-### P: ¿Qué pasa con los testimonios inapropiados?
-**R:** El equipo revisa regularmente. Los testimonios que violen las normas serán removidos.
+### P: ¿Qué pasa con testimonios inapropiados?
+**R:** El equipo revisa regularmente y remueve contenido que viole las normas.
 
 ---
 
 ## 🔧 Solución de Problemas
 
-### ❌ "El botón no funciona"
-**Solución:**
+### Problema: El botón no funciona
+
+**Soluciones:**
 1. Recarga la página (F5)
 2. Limpia el caché del navegador
 3. Intenta en otro navegador
 4. Verifica tu conexión a internet
 
-### ❌ "Me dice 'Campo obligatorio' pero lo completé"
-**Solución:**
-1. Asegúrate de que TODOS los campos tengan información
-2. Verifica no haya espacios en blanco al inicio o final
+### Problema: Me dice "Campo obligatorio"
+
+**Soluciones:**
+1. Verifica que TODOS los campos tengan información
+2. No dejes espacios en blanco al inicio o final
 3. Escribe al menos 20 caracteres en la historia
 4. Selecciona una calificación de estrellas
 
-### ❌ "El formulario desapareció"
-**Solución:**
+### Problema: El formulario desapareció
+
+**Soluciones:**
 1. Haz clic de nuevo en "Comparte tu Historia"
 2. Si ya enviaste, tu testimonio está guardado ✓
 
-### ❌ "No veo mi testimonio aparecer"
-**Solución:**
+### Problema: No veo mi testimonio
+
+**Soluciones:**
 1. Recarga la página
 2. Desplázate a la sección de testimonios
 3. Si enviaste hace poco, espera 5 segundos
 4. Limpia caché del navegador
 
-### ❌ "Recibo un error al enviar"
-**Solución:**
+### Problema: Recibo un error al enviar
+
+**Soluciones:**
 1. Verifica la conexión a internet
 2. Cierra y abre el navegador
 3. Intenta en modo incógnito
 4. Contacta al equipo técnico
 
-### ❌ "El formulario solo permite caracteres específicos"
-**Solución:**
-- Usa letras y números normales
-- Evita símbolos especiales raros
-- Los acentos están permitidos (á, é, í, ó, ú)
-
 ---
 
 ## 📞 Necesitas Ayuda Adicional?
 
-Si tienes problemas que no se resuelven con esta guía:
+Si tienes problemas:
 
-1. **Recarga la página completamente** (Ctrl+F5 o Cmd+Shift+R)
-2. **Limpia caché y cookies** del navegador
-3. **Intenta en otro navegador** (Chrome, Firefox, Safari)
-4. **Contacta al equipo de soporte** a través de la sección "Contacto"
+1. **Recarga completamente:** Ctrl+F5 (Windows) o Cmd+Shift+R (Mac)
+2. **Limpia caché:** Settings → Clear Browsing Data
+3. **Intenta otro navegador:** Chrome, Firefox, Safari
+4. **Contacta al equipo:** Sección "Contacto" en la aplicación
 
 ---
 
 ## 🎉 ¡Gracias por Compartir!
 
-Tu historia inspira a otros padres a hacer cambios positivos en la vida de sus hijos. Cada testimonio cuenta y es valioso para nuestra comunidad.
+Tu historia inspira a otros padres. Cada testimonio cuenta y es valioso para nuestra comunidad.
 
 **¡Esperamos leer tu historia pronto!**
 
 ---
 
 **Última actualización:** Noviembre 2025  
-**Versión del Manual:** 1.0
+**Versión:** 1.0
