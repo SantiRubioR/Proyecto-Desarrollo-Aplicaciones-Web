@@ -50,94 +50,119 @@
 ### Estructura de Carpetas
 
 \`\`\`
-📦 proyecto-alimentacion-saludable/
+proyecto-alimentacion-saludable/
 │
 ├── 📂 app/
-│   ├── layout.tsx              # Layout global
-│   ├── page.tsx                # Página raíz
-│   ├── globals.css             # Estilos globales
+│   ├── layout.tsx                 # Layout global
+│   ├── page.tsx                   # Página raíz (Home)
+│   ├── globals.css                # Estilos globales
 │   └── 📂 actions/
-│       └── testimonials.ts     # Server Actions para BD
+│       └── testimonials.ts        # Server Actions para BD
 │
 ├── 📂 components/
-│   ├── header.tsx              # Encabezado
-│   ├── sidebar.tsx             # Menú lateral
-│   ├── footer.tsx              # Pie de página
-│   ├── layout.tsx              # Layout wrapper
-│   ├── share-story-modal.tsx   # Modal de testimonios ⭐
-│   ├── testimonial-card.tsx    # Card de testimonios
+│   ├── header.tsx                 # Encabezado con logo
+│   ├── sidebar.tsx                # Menú lateral navegación
+│   ├── footer.tsx                 # Pie de página
+│   ├── layout.tsx                 # Layout wrapper
+│   ├── theme-provider.tsx         # Proveedor de tema
+│   ├── share-story-modal.tsx      # Modal compartir historias ⭐
+│   ├── testimonial-card.tsx       # Card de testimonios
 │   └── 📂 pages/
-│       ├── home.tsx            # Página inicio
-│       ├── recipes.tsx         # Recetas
-│       ├── community.tsx       # Comunidad
-│       ├── education.tsx       # Guías educativas
-│       ├── games.tsx           # Juegos
-│       └── alerts.tsx          # Alertas
+│       ├── home.tsx               # Página de inicio
+│       ├── recipes.tsx            # Recetas saludables
+│       ├── community.tsx          # Comunidad y recetas compartidas
+│       ├── education.tsx          # Guías educativas
+│       ├── games.tsx              # Juegos interactivos
+│       └── alerts.tsx             # Alertas y contenido educativo
 │
 ├── 📂 lib/
 │   ├── 📂 supabase/
-│   │   ├── client.ts           # Cliente Supabase (navegador)
-│   │   └── server.ts           # Cliente Supabase (servidor)
-│   ├── utils.ts                # Funciones utilitarias
-│   └── types.ts                # Tipos TypeScript
+│   │   ├── client.ts              # Cliente Supabase (navegador)
+│   │   └── server.ts              # Cliente Supabase (servidor)
+│   ├── utils.ts                   # Funciones utilitarias
+│   └── types.ts                   # Tipos TypeScript
 │
-├── 📂 public/                  # Assets estáticos (imágenes, iconos)
-├── 📂 scripts/                 # Scripts SQL para BD
-├── package.json                # Dependencias del proyecto
-└── tsconfig.json               # Configuración TypeScript
+├── 📂 public/                     # Assets estáticos (imágenes, iconos)
+├── 📂 scripts/                    # Scripts SQL para crear tablas
+├── 📂 styles/                     # Estilos adicionales (si los hay)
+├── package.json                   # Dependencias del proyecto
+├── tsconfig.json                  # Configuración TypeScript
+└── next.config.mjs                # Configuración Next.js
 \`\`\`
 
 ### Componentes Principales
 
-**Frontend (UI/UX)**
-- ✅ Header: Navegación y búsqueda
-- ✅ Sidebar: Menú de secciones
-- ✅ Modales: Formularios interactivos
-- ✅ Cards: Componentes reutilizables
-- ✅ Footer: Información y contacto
+#### Frontend (UI/UX)
 
-**Backend (Lógica)**
-- ✅ Server Actions: Funciones asincrónicas seguras
-- ✅ Supabase Client: Conexión a base de datos
-- ✅ RLS Policies: Control de acceso a datos
+- ✅ **Header**: Navegación superior y búsqueda
+- ✅ **Sidebar**: Menú lateral con todas las secciones
+- ✅ **Modales**: Formularios interactivos (compartir historias)
+- ✅ **Cards**: Componentes reutilizables
+- ✅ **Footer**: Información y contacto
+
+#### Backend (Lógica)
+
+- ✅ **Server Actions**: Funciones asincrónicas seguras en servidor
+- ✅ **Supabase Client**: Conexión segura a base de datos
+- ✅ **RLS Policies**: Control de acceso a datos con Row Level Security
 
 ---
 
 ## 🔄 Flujo de Datos
 
 \`\`\`
-Usuario llena formulario en navegador
-           ↓
-    React Component
-    (share-story-modal.tsx)
-           ↓
-   Valida campos del formulario
-           ↓
-    Llama Server Action
-    (createTestimonial)
-           ↓
- Supabase Client (servidor)
-    Se conecta a BD
-           ↓
- INSERT en tabla testimonios
-           ↓
-  BD retorna los datos
-           ↓
-  Usuario ve confirmación
-           ↓
- Testimonio aparece en Home
+┌─────────────────────────────────────────────┐
+│  Usuario llena formulario en navegador      │
+└────────────────────┬────────────────────────┘
+                     ↓
+         ┌───────────────────────┐
+         │   React Component     │
+         │ share-story-modal.tsx │
+         └───────────┬───────────┘
+                     ↓
+         ┌───────────────────────┐
+         │ Valida campos del form│
+         └───────────┬───────────┘
+                     ↓
+         ┌───────────────────────┐
+         │  Llama Server Action  │
+         │ createTestimonial()   │
+         └───────────┬───────────┘
+                     ↓
+         ┌───────────────────────┐
+         │  Supabase Client      │
+         │  (servidor)           │
+         └───────────┬───────────┘
+                     ↓
+         ┌───────────────────────┐
+         │  PostgreSQL INSERT    │
+         │  tabla testimonios    │
+         └───────────┬───────────┘
+                     ↓
+         ┌───────────────────────┐
+         │  BD retorna datos     │
+         └───────────┬───────────┘
+                     ↓
+         ┌───────────────────────┐
+         │ Usuario ve confirmación
+         └───────────┬───────────┘
+                     ↓
+         ┌───────────────────────┐
+         │ Testimonio aparece    │
+         │ en la página Home     │
+         └───────────────────────┘
 \`\`\`
 
-### Detalle del Flujo
+### Detalle del Flujo Paso a Paso
 
-1. **Usuario interactúa**: Completa el formulario en el navegador
-2. **Validación**: React valida que todos los campos sean correctos
-3. **Envío**: Se llama la Server Action `createTestimonial`
-4. **Procesamiento**: El servidor conecta con Supabase
-5. **Almacenamiento**: PostgreSQL guarda el testimonio
-6. **Respuesta**: Los datos se devuelven al navegador
-7. **UI Actualizada**: El componente muestra el éxito
-8. **Persistencia**: El dato está guardado permanentemente
+**Paso 1:** Usuario interactúa → Completa el formulario en el navegador  
+**Paso 2:** Validación → React valida que todos los campos sean correctos  
+**Paso 3:** Envío → Se llama la Server Action `createTestimonial`  
+**Paso 4:** Procesamiento → El servidor conecta con Supabase  
+**Paso 5:** Almacenamiento → PostgreSQL guarda el testimonio  
+**Paso 6:** Respuesta → Los datos se devuelven al navegador  
+**Paso 7:** UI Actualizada → El componente muestra el éxito  
+**Paso 8:** Persistencia → El dato está guardado permanentemente
 
 ---
 
@@ -147,21 +172,21 @@ Usuario llena formulario en navegador
 
 | Ventaja | Beneficio | Caso de Uso |
 |:--------|:----------|:-----------|
-| **PostgreSQL Potente** | Base de datos confiable y rápida | Almacenamiento testimonios |
-| **Auth Integrada** | Autenticación sin código extra | Usuarios futuros |
-| **Row Level Security** | Privacidad automática | Control de acceso |
-| **Real-time API** | Actualizaciones en vivo | Comentarios en tiempo real |
-| **REST + GraphQL** | APIs automáticas | Consultas flexibles |
-| **Panel Admin** | Gestión visual de datos | Dashboard de administrador |
-| **Precio Justo** | Tier gratuito generoso | Proyectos pequeños |
-| **Escalable** | Crece con tu proyecto | Futuro crecimiento |
+| PostgreSQL Potente | Base de datos confiable y rápida | Almacenamiento testimonios |
+| Auth Integrada | Autenticación sin código extra | Usuarios futuros |
+| Row Level Security | Privacidad automática | Control de acceso |
+| Real-time API | Actualizaciones en vivo | Comentarios en tiempo real |
+| REST + GraphQL | APIs automáticas | Consultas flexibles |
+| Panel Admin | Gestión visual de datos | Dashboard administrador |
+| Precio Justo | Tier gratuito generoso | Proyectos pequeños |
+| Escalable | Crece con tu proyecto | Futuro crecimiento |
 
 ### Alternativas Consideradas
 
 | Alternativa | Por qué NO | Por qué SÍ Supabase |
 |:------------|:-----------|:-------------------|
 | Firebase | Vendor lock-in | Supabase = Open Source |
-| Neon | Similar, pero menos UI | Supabase = mejor dashboard |
+| Neon | Similar pero menos UI | Supabase = mejor dashboard |
 | MongoDB | NoSQL menos seguro | Supabase = SQL + RLS |
 
 ---
@@ -179,37 +204,39 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGc...tu-clave-publica
 SUPABASE_SERVICE_ROLE_KEY=eyJhbGc...clave-privada-servidor
 \`\`\`
 
-### Dónde Obtenerlas (Paso a Paso)
+### Dónde Obtenerlas - Paso a Paso
 
-**1. Abre Supabase Dashboard**
-   - Dirección: https://supabase.com/dashboard
-   - Inicia sesión con tu cuenta
+**Paso 1:** Abre Supabase Dashboard
+- Dirección: https://supabase.com/dashboard
+- Inicia sesión con tu cuenta
 
-**2. Selecciona tu Proyecto**
-   - Lista de proyectos a la izquierda
+**Paso 2:** Selecciona tu Proyecto
+- Lista de proyectos a la izquierda
 
-**3. Ve a Configuración → API**
-   - Click en "Settings" (engranaje abajo izquierda)
-   - Luego click en "API"
+**Paso 3:** Ve a Configuración → API
+- Click en "Settings" (engranaje abajo izquierda)
+- Luego click en "API"
 
-**4. Copia las Claves**
-   - `Project URL` → `NEXT_PUBLIC_SUPABASE_URL`
-   - `anon public` → `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-   - `service_role secret` → `SUPABASE_SERVICE_ROLE_KEY`
+**Paso 4:** Copia las Claves
+- `Project URL` → `NEXT_PUBLIC_SUPABASE_URL`
+- `anon public` → `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `service_role secret` → `SUPABASE_SERVICE_ROLE_KEY`
 
-**5. Crea archivo `.env.local`**
-   \`\`\`
-   En la raíz del proyecto, crea:
-   proyecto-alimentacion-saludable/
-   ├── .env.local    ← Archivo nuevo aquí
-   └── package.json
-   \`\`\`
+**Paso 5:** Crea archivo `.env.local`
 
-**6. Pega las variables**
-   \`\`\`bash
-   NEXT_PUBLIC_SUPABASE_URL=https://xxxx.supabase.co
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGc...
-   \`\`\`
+En la raíz del proyecto:
+\`\`\`
+proyecto-alimentacion-saludable/
+├── .env.local    ← Crear aquí
+└── package.json
+\`\`\`
+
+**Paso 6:** Pega las variables
+
+\`\`\`bash
+NEXT_PUBLIC_SUPABASE_URL=https://xxxx.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGc...
+\`\`\`
 
 ---
 
@@ -239,11 +266,11 @@ CREATE TABLE testimonios (
 | `nombre_acudiente` | VARCHAR | ✅ | Carlos López | Nombre del padre/madre |
 | `relacion` | VARCHAR | ✅ | Padre | Relación con el niño |
 | `nombre_nino` | VARCHAR | ✅ | Santiago | Nombre del niño |
-| `comentario` | TEXT | ✅ | Mi hijo... | Historia/experiencia completa |
+| `comentario` | TEXT | ✅ | Mi hijo cambió... | Historia/experiencia |
 | `estrellas` | INTEGER | ✅ | 5 | Calificación 1 a 5 |
-| `logro` | VARCHAR | ❌ | Mejor concentración | Logro alcanzado (opcional) |
-| `created_at` | TIMESTAMP | ✅ | 2025-11-28 | Fecha de creación automática |
-| `updated_at` | TIMESTAMP | ✅ | 2025-11-28 | Última actualización automática |
+| `logro` | VARCHAR | ❌ | Mejor concentración | Logro alcanzado |
+| `created_at` | TIMESTAMP | ✅ | 2025-11-28 | Fecha creación automática |
+| `updated_at` | TIMESTAMP | ✅ | 2025-11-28 | Última actualización |
 
 ### Row Level Security (RLS)
 
@@ -329,6 +356,7 @@ npm run dev
 \`\`\`
 
 Verás algo como:
+
 \`\`\`
 ▲ Next.js 16.0.3
 - Ready in 1.2s
