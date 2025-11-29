@@ -90,6 +90,9 @@ proyecto-alimentacion-saludable/
 └── next.config.mjs                # Configuración Next.js
 \`\`\`
 
+<img width="602" height="741" alt="image" src="https://github.com/user-attachments/assets/5d6ff56d-f9cc-4200-9b19-0a5250f96a26" />
+
+
 ### Componentes Principales
 
 #### Frontend (UI/UX)
